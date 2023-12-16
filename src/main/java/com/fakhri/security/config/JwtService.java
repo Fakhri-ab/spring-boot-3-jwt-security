@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+//
+//Cette classe JwtService gère la création,
+// l'extraction et la validation des tokens JWT dans le cadre de l'authentification Spring Security
 @Service
 public class JwtService {
     private static final String secretKey = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970" ;

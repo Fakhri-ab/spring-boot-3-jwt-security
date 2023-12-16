@@ -13,6 +13,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+
+// Cette classe configure l'authentification dans Spring Security,
+// définissant les composants nécessaires tels que le service utilisateur,
+// le fournisseur d'authentification, l'encodeur de mot de passe et l'AuthenticationManager
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {

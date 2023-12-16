@@ -9,7 +9,7 @@ spring:
     show-sql: true
     # Hibernate DDL Auto (create, create-drop, update)
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       dialect: org.hibernate.dialect.MySQL5Dialect
 
 server:
