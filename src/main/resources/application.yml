@@ -9,14 +9,14 @@ spring:
     show-sql: true
     # Hibernate DDL Auto (create, create-drop, update)
     hibernate:
-      ddl-auto: update
-      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.MySQL8Dialect
 
 application:
   security:
     jwt:
       secretKey: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-      expiration: 60000 # a day
+      expiration: 86400000 # a day
       refresh-token:
         expiration: 604800000 # 7 days
 

@@ -40,7 +40,7 @@ public class User implements UserDetails {
     // Cette méthode renvoie une liste contenant le rôle de l'utilisateur sous forme d'objet
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return role.getAuthorities();
     }
 
     @Override
