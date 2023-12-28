@@ -1,0 +1,43 @@
+### Register User
+POST http://localhost:8083/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstname": "Fakhri",
+  "lastname": "Abessi",
+  "email":  "abbessi.fakhri@gmail.com",
+  "password": "123"
+}
+
+> {% client.global.set("auth-token", response.body.accessToken);  %}
+
+
+###Create a new book
+POST http://localhost:8083/api/v1/books
+Authorization: Bearer {{auth-token}}
+Content-Type: application/json
+
+{
+  "author": "Fakhri",
+  "isbn": "12345"
+}
+
+### Query Books
+GET http://localhost:8083/api/v1/books
+Authorization: Bearer {{auth-token}}
+Content-Type: application/json
+
+### Update one book
+POST http://localhost:8083/api/v1/books
+Authorization: Bearer {{auth-token}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "author": "Fakhri 2",
+  "isbn": "12345"
+}
+
+### Query the Books one more time
+GET http://localhost:8083/api/v1/books
+Authorization: Bearer {{auth-token}}
